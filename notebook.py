@@ -1,29 +1,25 @@
 import sqlite3
-import nltk
-import numpy as np
-import sklearn
-import tensorflow as tf
-import keras
-from flask import Flask
-import django
+
 notebook = sqlite3.connect("So_Tay.db")
 mousebook = notebook.cursor()
 mousebook.execute("CREATE TABLE IF NOT EXISTS noteter(title TEXT, content TEXT)")
+
 # Phần lệnh hướng dẫn
 def huongdan():
     feature = [
-    "Sổ tay",
-    "Trợ lý",
-    "Đóng",
-    "Viết: khi đã mở sổ tay",
-    "Đọc: khi đã mở sổ tay",
-    "Quay lại"
-]
-    print("_____________________\n")
+        "Sổ tay",
+        "Trợ lý",
+        "Đóng",
+        "Viết: khi đã mở sổ tay",
+        "Đọc: khi đã mở sổ tay",
+        "Quay lại"
+    ]
+    print("_____________________")
     for i in feature:
         print("-", i)
     print("_____________________")
-# Phần viêt ghi chú
+
+# Phần viết ghi chú
 def viet():
     title = input("Tiêu đề: ").lower()
     content = input("Nội dung: ").lower()
@@ -32,16 +28,17 @@ def viet():
     elif content == "":
         print("Nội dung không được để trống!")
     else:
-        mousebook.execute("INSERT INTO data VALUES (?, ?)", (title, content))
+        mousebook.execute("INSERT INTO noteter VALUES (?, ?)", (title, content))
         notebook.commit()
         print("Lưu thành công!")
+
 # Phần đọc ghi chú
 def doc():
     while True:
         search = input("Tìm kiếm: ").lower()
-        mousebook.execute("SELECT content FROM data WHERE title=?", (search,))
+        mousebook.execute("SELECT content FROM noteter WHERE title=?", (search,))
         reply = mousebook.fetchone()
-        if reply == None:
+        if reply is None:
             print("Không tìm thấy ghi chú nào như vậy?")
             while True:
                 computer = input("Bạn muốn viết ghi chú này không: ")
@@ -51,6 +48,7 @@ def doc():
                     break
         else:
             print(reply[0])
+
 print("Nhắc nhở: Nhập >>hướng dẫn<< nếu chưa biết cách sử dụng!")
 while True:
     command = input("Bạn cần gì: ").lower()
