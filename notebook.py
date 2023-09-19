@@ -12,6 +12,9 @@ def huongdan():
         "Đóng",
         "Viết: khi đã mở sổ tay",
         "Đọc: khi đã mở sổ tay",
+        "Xóa: khi đã mở sổ tay",
+        "Xóa hết: khi đã mở sổ tay",
+        "Hiển thị: khi đã mở sổ tay",
         "Quay lại"
     ]
     print("_____________________")
@@ -49,7 +52,36 @@ def doc():
         else:
             print(reply[0])
 
-print("Nhắc nhở: Nhập >>hướng dẫn<< nếu chưa biết cách sử dụng!")
+# Phần xóa dữ liệu trong bảng
+def xoa():
+    title = input("Nhập tiêu đề ghi chú cần xóa: ").lower()
+    mousebook.execute("DELETE FROM noteter WHERE title=?", (title,))
+    notebook.commit()
+    print("Xóa thành công!")
+
+# Phần xóa hết dữ liệu trong bảng
+def xoa_het():
+    confirm = input("Bạn có chắc chắn muốn xóa hết dữ liệu không? (yes/no): ").lower()
+    if confirm == "yes":
+        mousebook.execute("DELETE FROM noteter")
+        notebook.commit()
+        print("Xóa hết thành công!")
+    else:
+        print("Hủy xóa hết dữ liệu.")
+
+# Phần hiển thị tất cả dữ liệu trong noter
+def hien_thi():
+    mousebook.execute("SELECT * FROM noteter")
+    data = mousebook.fetchall()
+    if len(data) == 0:
+        print("Không có dữ liệu nào trong sổ tay.")
+    else:
+        for row in data:
+            print("Tiêu đề:", row[0])
+            print("Nội dung:", row[1])
+            print("----------------------------")
+
+print("Nhắc nhở: Nhập 'hướng dẫn' nếu chưa biết cách sử dụng!")
 while True:
     command = input("Bạn cần gì: ").lower()
     if command == "hướng dẫn":
@@ -65,6 +97,12 @@ while True:
                 viet()
             elif you == "đọc":
                 doc()
+            elif you == "xóa":
+                xoa()
+            elif you == "xóa hết":
+                xoa_het()
+            elif you == "hiển thị":
+                hien_thi()
             elif you == "đóng":
                 break
             else:
