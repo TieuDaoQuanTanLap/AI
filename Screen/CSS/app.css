@@ -69,7 +69,9 @@
     border-right: 5px solid rgb(94, 94, 94);
     border-bottom: 5px solid rgb(94, 94, 94);
     padding: 10px;
+    overflow-y: scroll;
 }
+
 .full-screen .form-chat .messenger div {
     width:fit-content;
     height: fit-content;
@@ -80,6 +82,7 @@
     font-size: 15px;
     font-weight: 600;
     font-family: 'Times New Roman', Times, serif;
+    overflow-y:hidden ;
 }
 
 .full-screen .form-chat .chat input {
@@ -94,6 +97,7 @@
     font-family: 'Times New Roman', Times, serif;
     padding-left: 10px;
 }
+
 .full-screen .form-chat .chat button {
     width: 50px;
     height: 50px;
