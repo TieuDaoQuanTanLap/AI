@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="./sign.css">
+</head>
+<body>
+    <div class="background">
+        <img src="../../../Image/resister.jpg" alt="">
+    </div>
+    <div class="wapper">
+        <div class="heading">
+            <h1>Đăng ký</h1>
+        </div>
+        <form action="">
+            <div class="sign-group">
+                <p>Tên đăng nhập</p>
+                <input type="text" id="username" placeholder="Gợi ý: Chữ cái hoa, thường.">
+                <span id="user-error"></span>
+            </div>
+            <div class="sign-group">
+                <p>Địa chỉ email</p>
+                <input type="email" id="email" placeholder="Nhập địa chỉ email chưa đăng ký.">
+                <span id="email-error"></span>
+            </div>
+            <div class="sign-group">
+                <p>Mật khẩu</p>
+                <input type="password" id="password" placeholder="Gợi ý: Chữ cái hoa, thường và số.">
+                <span id="pass-error"></span>
+            </div>
+            <div class="sign-group">
+                <p>Nhập lại mật khẩu</p>
+                <input type="password" id="comfirst" placeholder="Nhập lại mật khẩu vừa nhập.">
+                <span id="comfirst-error"></span>
+            </div>
+            <div class="sign-up">
+                <button id="sign">Đăng ký</button>
+            </div>
+        </form>
+    </div>
+    <script src="./sign.js"></script>
+</body>
+</html>

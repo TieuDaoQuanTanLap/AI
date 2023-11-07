@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book chat</title>
+    <link rel="stylesheet" href="./sotay.css">
+</head>
+<body>
+    <div class="bookchat">
+        <div class="console">
+            <div class="heading">
+                <h1>Công cụ</h1> 
+            </div>
+            <div class="feature">
+                <button id="back">Quay lại</button>
+            </div>
+            <div class="feature">
+                <button id="sotay" style="background: rgb(255, 136, 0);">Sổ tay</button>
+            </div>
+            <div class="feature">
+                <button id="luutru">Lưu trữ</button>
+            </div>
+            <div class="setting">
+                <button id="setting">Cài đặt</button>
+            </div>
+        </div>
+        <div class="task">
+            <div class="title">Sổ tay của bạn</div>
+            <div class="messenger">
+                <div class="bot" id="botchat">Xin chào! Bạn cần gì?</div>
+                <div class="person" id="person">Xin chào!</div>
+            </div>
+            <div class="chat">
+                <form action="">
+                    <input type="text" id="youchat" placeholder="Gõ[Lưu] rồi bắt đầu nhập tên và nội dung để lưu!">
+                    <button id="savenote">Lưu</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./sotay.js"></script>
+</body>
+</html>

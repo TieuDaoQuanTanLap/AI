@@ -1,0 +1,151 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+.bookchat {
+    display: flex;
+}
+
+.bookchat .console {
+    background: black;
+    border: 5px solid rgb(131, 131, 131);
+    height: 600px;
+    width: 250px;
+}
+
+.bookchat .console .heading {
+    width: 240px;
+    border-bottom: 5px solid rgb(131, 131, 131);
+}
+
+.bookchat .console .heading h1 {
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.bookchat .console .feature {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bookchat .console .feature button {
+    width: 230px;
+    height: 37px;
+    font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background: rgb(214, 214, 214);
+    border-radius: 10px;
+}
+
+.bookchat .console .feature button:hover {
+    background: rgb(233, 233, 233);
+}
+
+.bookchat .console .setting {
+    text-align: center;
+    margin-top: 340px;
+}
+
+.bookchat .console .setting button {
+    width: 230px;
+    height: 35px;
+    font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background: rgb(214, 214, 214);
+}
+
+.bookchat .task {
+    border-top: 5px solid rgb(131, 131, 131);
+    border-right: 5px solid rgb(131, 131, 131);
+    border-bottom: 5px solid rgb(131, 131, 131);
+    background: black;
+    width: 100%;
+}
+
+.bookchat .task .title {
+    text-align: center;
+    padding: 11px;
+    color: white;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-bottom: 5px solid rgb(131, 131, 131);
+}
+
+.bookchat .task .messenger {
+    border: 5px solid rgba(131, 131, 131, 0);
+    height: 460px;
+    padding: 10px;
+}
+/* ==========\/========== */
+.bookchat .task .messenger div {
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cursive;
+    margin-top: 10px;
+    padding: 6px;
+    border: 3px solid white;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.bookchat .task .messenger .person {
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cursive;
+    margin-top: 10px;
+    margin-left: 930px;
+    padding: 6px;
+    border: 3px solid white;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+/* ==========/\========== */
+
+.bookchat .task .chat form {
+    display: flex;
+    border-top: 5px solid rgb(133, 133, 133);
+}
+
+.bookchat .task .chat form input {
+    background: none;
+    width: 93%;
+    height: 55px;
+    margin-top: 4px;
+    margin-left: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: cursive;
+    color: white;
+}
+
+.bookchat .task .chat form button {
+    width: 60px;
+    height: 55px;
+    background: rgb(131, 131, 131);
+    margin-top: 4px;
+    margin-left: 3px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bookchat .task .chat form button:hover {
+    background: rgb(192, 192, 192);
+}
